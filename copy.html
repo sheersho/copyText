@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>constructor-selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+    
+<style>
+    
+  
+    
+    
+    
+</style>
+<body>
+    
+   
+
+        <p style="color:black;font-size:55px;text-align:center;">ClassTrak APIs</p>
+    <p style="color:black;font-size:20px;text-align:center;">IG Infosytems Pvt. Ltd - &copy; Sheersho Pramanik</p>
+    
+
+
+
+ 
+
+      
+<div class="input-group mb-5" style="padding: 0px 60px; " >
+    
+  <div class="input-group-prepend">
+     
+    <span class="input-group-text" id="basic-addon3" >Payment Modes</span>
+  </div>
+    <textarea style="height: 40px;" type="text" class="form-control" id="basic1"   >http://it.igcoco.com/api/get-payment-mode</textarea>
+    <button class="btn btn-primary" style="margin-left: 10px;" onclick="copyToClipboard('#basic1')">Copy URL</button><br/>
+
+</div>
+    
+    
+<div class="input-group mb-5" style="padding: 0px 60px;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3" >Payment Student List</span>
+  </div>
+    <p type="text" class="form-control" id="basic2"  >http://it.igcoco.com/api/get-my-students-list?sub_entity_code=9901</p>
+    <button class="btn btn-primary" onclick="copyToClipboard('#basic2')" style="margin-left: 10px;">Copy URL</button><br/>
+
+</div>
+    
+<div class="input-group mb-5" style="padding: 0px 60px;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3" >Make A Payment</span>
+  </div>
+    <textarea type="text" class="form-control" id="basic3"  >http://it.igcoco.com/api/make-a-payment?emp_id=800000990001&student_id=900000990001&amount=700&remarks=paid&ig_date=2020-04-11&payment_mode=1</textarea>
+    <button class="btn btn-primary" onclick="copyToClipboard('#basic3')" style="margin-left: 10px;">Copy URL</button><br/>
+
+</div>
+    
+<div class="input-group mb-5" style="padding: 0px 60px;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3" >Received Payments</span>
+  </div>
+    <span type="text" class="form-control" id="basic4"  > http://it.igcoco.com/api/get-received-payments-subentity-wise?sub_entity_code=9901
+</span>
+    <button class="btn btn-primary" onclick="copyToClipboard('#basic4')" style="margin-left: 10px;">Copy URL</button><br/>
+
+</div>
+    
+
+    
+<div class="input-group mb-5" style="padding: 0px 60px;">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3" >Suspend Student</span>
+  </div>
+    <textarea type="text" class="form-control" id="basic5"  >http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001
+</textarea>
+    <button class="btn btn-primary" onclick="copyToClipboard('#basic5')" style="margin-left: 10px;">Copy URL</button><br/>
+
+</div>
+
+
+
+    
+    
+    <script>
+        
+    function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+    
+    </script>
+   
+</body>
+    
+    
+</html>
