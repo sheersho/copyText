@@ -30,9 +30,6 @@
 
 
 
-
-
-
     <div class="input-group mb-5" style="padding: 0px 60px; " >
 
       <div class="input-group-prepend">
@@ -65,21 +62,31 @@
 
     <div class="input-group mb-5" style="padding: 0px 60px;">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >Received Payments</span>
+        <span class="input-group-text" id="basic-addon3" >Rec. Payments</span>
       </div>
         <span type="text" class="form-control" id="basic4"  > http://it.igcoco.com/api/get-received-payments-subentity-wise?sub_entity_code=9901
     </span>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic4')" style="margin-left: 10px;">Copy URL</button><br/>
     </div>
 
+     <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Rec. Payment (prev)</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic5"  > it.igcoco.com/api/get-received-payments-previous-month?sub_entity_code=9901</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic5')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+
 
     <div class="input-group mb-5" style="padding: 0px 60px;">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Suspend Student</span>
       </div>
-        <textarea type="text" class="form-control" id="basic5"  >http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001
+        <textarea type="text" class="form-control" id="basic6"  >http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001http://it.igcoco.com/api/suspend-student?student_id=900000990001&emp_id=800000990001
     </textarea>
-        <button class="btn btn-primary" onclick="copyToClipboard('#basic5')" style="margin-left: 10px;">Copy URL</button><br/>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic6')" style="margin-left: 10px;">Copy URL</button><br/>
         
 
     </div>
@@ -87,8 +94,8 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Reverse Suspend Student</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic6"  >http://it.igcoco.com/api/reverse-suspend-student?student_id=900000990001</textarea>
-        <button class="btn btn-primary" onclick="copyToClipboard('#basic6')" style="margin-left: 10px;">Copy URL</button><br/>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic7"  >http://it.igcoco.com/api/reverse-suspend-student?student_id=900000990001</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic7')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
         
@@ -99,31 +106,67 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get All Reminders</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic7"  > http://it.igcoco.com/api/get-all-reminders?sub_entity_id=9901</textarea>
-        <button class="btn btn-primary" onclick="copyToClipboard('#basic7')" style="margin-left: 10px;">Copy URL</button><br/>
-
-    </div>
-
-    </div>
-        <div class="input-group mb-5" style="padding: 0px 60px;">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >Get Student</span>
-      </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic8"  > http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic8"  > http://it.igcoco.com/api/get-all-reminders?sub_entity_id=9901</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic8')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     </div>
-        <div class="input-group mb-5" style="padding: 0px 60px;">
+    </div>
+    
+    <div class="input-group mb-5" style="padding: 0px 60px;">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >Received Payment (cur. month)</span>
+        <span class="input-group-text" id="basic-addon3" >Get Student</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic9"  > it.igcoco.com/api/get-received-payments-subentity-wise?sub_entity_code=9901</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic9"  > http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic9')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
+      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Get Emp Timetable</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic10"  >http://it.igcoco.com/api/get-employee-timetable?user_id=800000310001</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic10')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+
+   <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >SMS Payment Reminder</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic11"  >http://it.igcoco.com/api/sms-payment-reminder?student_id=900000990002</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic11')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Notify Slot</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic12"  >http://it.igcoco.com/api/notify-slot-clients?slot_id=2807</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic12')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+
+  
 
 
     
