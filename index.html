@@ -10,7 +10,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-           <link rel="shortcut icon" type="image/jpg" href="images/savicon.png"/>
+           <link rel="shortcut icon" type="image/jpg" href="images/logo_classtrak.png"/>
+           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <style>
@@ -22,13 +23,32 @@
     </style>
     <body>
 
+<!--             <button  onclick="location.href = 'insert.php';" style="margin:30px 60px;" class="btn btn-warning">Insert Code</button>
+            <img style="margin:30px 60px;" src="images/logo_classtrak.png" width="5%" height= "5%"alt="Classtrak" align="right">
+
+<div align="center" id=title>
+        <p style="color:black;font-size:55px;">ClassTrak APIs</p>
+        <p style="color:black;font-size:20px;">IG Infosytems Pvt. Ltd - &copy; Sheersho Pramanik</p>
+
+</div> -->
+
+<div class="container">
+  <div class="row">
+   <!--  <div class="col">
+       <img align="right" style="margin:30px 60px;" src="images/logo_classtrak.png" width="25%" height= "45%"alt="Classtrak" >
+      
+    </div> -->
+    <div style="text-align: center; " class="col-md-12 col-sm-12 col-md-12">
+      <p style="color:black;font-size:55px;">ClassTrak APIs</p>
+        <p style="color:black;font-size:20px;font-family: 'Poppins'">IG Infosytems Pvt. Ltd - &copy; Sheersho Pramanik</p>  
+    </div>
+    <!-- <div class="col">
+    </div> -->
+  </div>
+</div>
 
 
-            <p style="color:black;font-size:55px;text-align:center;">ClassTrak APIs</p>
-        <p style="color:black;font-size:20px;text-align:center;">IG Infosytems Pvt. Ltd - &copy; Sheersho Pramanik</p>
-
-
-
+<div id="mycontent" >
 
     <div class="input-group mb-5" style="padding: 0px 60px; " >
 
@@ -166,6 +186,42 @@
       </div>
         <textarea  style="height: 40px;" type="text" class="form-control" id="basic14"  >http://it.igcoco.com/api/update-my-settings?user_id=800000990001&pref_name=manual_notifications&pref_val=1</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic14')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Get Sessions(slot)</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic15"  >http://it.igcoco.com/api/get-sessions-by-slot?slot_id=2807</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic15')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >reschedule slot</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic16"  >http://it.igcoco.com/api/reschedule-slot?prev_slot_id=2807&remarks=&rescheduledflag=0&new_slot_id=2801</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic16')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+       <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >reschedule session</span>
+      </div>
+        <textarea   type="text" class="form-control" id="basic17"  >http://it.igcoco.com/api/reschedule-session?prev_session_id=2766&rescheduledflag=0&next_session_id=2999&student_id=900000990001</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic17')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Mark Attendance</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control" id="basic18"  >http://it.igcoco.com/api/mark-attendance?session_id=14228&event_id=3</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic18')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
