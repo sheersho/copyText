@@ -5,23 +5,100 @@
         <title>Classtrak Docs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-           <link rel="shortcut icon" type="image/jpg" href="images/logo_classtrak.png"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+
+
+           <link rel="shortcut icon" type="image/jpg" href="resources/views/guest/favsh.png"/>
            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <style>
 
+      .rowsCustom{
+
+      padding: 0px 60px; 
+}
+
+.heightCustom{
+  height: 40px;
+}
+
+.timetop{
+
+  padding-top:50px!important;
+
+
+}
+
+.buttontop{
+  margin-top:50px;
+}
+
+.buttonSpec { 
+       white-space: inherit;
+    }
+
+
+@media only screen and (max-width: 600px) {
+
+
+     .rowsCustom{
+
+      padding: 0px 10px; 
+     }
+
+     .timetop{
+
+  padding:10px 10px!important;
+  text-align: center;
+
+
+}
+.buttontop{
+  margin-top:20px;
+}
 
 
 
+
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    .buttonSpec { 
+       white-space: pre-line;
+    }
+  }
 
     </style>
-    <body>
+    <body >
+
+      <script type="text/javascript">
+        
+        function getTimeStamp() {
+         var now = new Date();
+         return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+           + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
+             .getSeconds()) : (now.getSeconds())));
+       }
+       function setTime() {
+        document.getElementById('showDate').innerHTML = getTimeStamp();
+      }
+
+      function myFunction(){
+        alert('This feature is COMING SOON - admin Sheersho');
+      }
+
+   
+
+    </script>
 
 <!--             <button  onclick="location.href = 'insert.php';" style="margin:30px 60px;" class="btn btn-warning">Insert Code</button>
             <img style="margin:30px 60px;" src="images/logo_classtrak.png" width="5%" height= "5%"alt="Classtrak" align="right">
@@ -34,44 +111,62 @@
 
 <div class="container">
   <div class="row">
-   <!--  <div class="col">
-       <img align="right" style="margin:30px 60px;" src="images/logo_classtrak.png" width="25%" height= "45%"alt="Classtrak" >
-      
-    </div> -->
-    <div style="text-align: center; " class="col-md-12 col-sm-12 col-md-12">
+    <div class=" buttontop col-md-3 col-xs-3 col-sm-3 buttonSpec " >
+           <button id="buts" style="margin-right: 10px;" type="button" class="btn btn-primary disabled" >Get Time</button>
+
+          <button class="btn btn-secondary"  onclick="copyToClipboard('#basic1')">API History</button><br/>
+    </div>
+    <div style="text-align: center; " class="col-md-6 col-xs-6 col-sm-6">
       <p style="color:black;font-size:55px;">ClassTrak APIs</p>
         <p style="color:black;font-size:20px;font-family: 'Poppins'">IG Infosytems Pvt. Ltd - &copy; Sheersho Pramanik</p>  
     </div>
+    <div  class=" timetop col-md-3 col-xs-3 col-sm-3">
+       Last Updated : <h6 id="showDate"  >5/5/2020 16:46:54</h6>
+     
+      
+    </div>
+
     <!-- <div class="col">
     </div> -->
   </div>
 </div>
 
+<script type="text/javascript">
+  
+
+     document.getElementById("buts").addEventListener('mouseover',function(buts){
+
+       alert('Current Date & Time is ' + getTimeStamp());
+       
+
+      });
+</script>
+
 
 <div id="mycontent" >
 
-    <div class="input-group mb-5" style="padding: 0px 60px; " >
+    <div class="input-group mb-5 rowsCustom rowsCustom" >
 
       <div class="input-group-prepend">
 
         <span class="input-group-text" id="basic-addon3" >Payment Modes</span>
       </div>
-        <textarea style="height: 40px;" type="text" class="form-control" id="basic1"   >http://it.igcoco.com/api/get-payment-mode</textarea>
+        <textarea style="height: 40px;" type="text" class="form-control heightCustom" id="basic1"   >http://it.igcoco.com/api/get-payment-mode</textarea>
         <button class="btn btn-primary" style="margin-left: 10px;" onclick="copyToClipboard('#basic1')">Copy URL</button><br/>
 
     </div>
 
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Payment Student List</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic2"  >http://it.igcoco.com/api/get-my-students-list?sub_entity_code=9901</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control heightCustom" id="basic2"  >http://it.igcoco.com/api/get-my-students-list?sub_entity_code=9901</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic2')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Make A Payment</span>
       </div>
@@ -81,16 +176,16 @@
     </div>
 
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Rec. Payments</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic4">http://it.igcoco.com/api/get-received-payments-subentity-wise?sub_entity_code=9901  </textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control heightCustom" id="basic4">http://it.igcoco.com/api/get-received-payments-subentity-wise?sub_entity_code=9901  </textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic4')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Rec. Payment (prev)</span>
       </div>
@@ -99,9 +194,19 @@
 
     </div>
 
+    <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >get Pending Payments</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control heightCustom" id="basic32"  >http://it.igcoco.com/api/get-pending-payments-for-subentity?sub_entity_code=9901</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic32')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
 
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+
+
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Suspend Student</span>
       </div>
@@ -111,11 +216,11 @@
         
 
     </div>
-        <div class="input-group mb-5" style="padding: 0px 60px;">
+        <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Reverse Suspend Student</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic7"  >http://it.igcoco.com/api/reverse-suspend-student?student_id=900000990001</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic7"  >http://it.igcoco.com/api/reverse-suspend-student?student_id=900000990001</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic7')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
@@ -123,182 +228,216 @@
         
 
      </div>
-        <div class="input-group mb-5" style="padding: 0px 60px;">
+        <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get All Reminders</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic8"  > http://it.igcoco.com/api/get-all-reminders?sub_entity_id=9901</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic8"  > http://it.igcoco.com/api/get-all-reminders?sub_entity_id=9901</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic8')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
     </div>
     
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get Student</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic9"  > http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic9"  > http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic9')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get Emp Timetable</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic10"  >http://it.igcoco.com/api/get-employee-timetable?user_id=800000310001</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic10"  >http://it.igcoco.com/api/get-employee-timetable?user_id=800000310001</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic10')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
 
-   <div class="input-group mb-5" style="padding: 0px 60px;">
+   <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >SMS Payment Reminder</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic11"  >http://it.igcoco.com/api/sms-payment-reminder?student_id=900000990002</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic11"  >http://it.igcoco.com/api/sms-payment-reminder?student_id=900000990002</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic11')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Notify Slot</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic12"  >http://it.igcoco.com/api/notify-slot-clients?slot_id=2807</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic12"  >http://it.igcoco.com/api/notify-slot-clients?slot_id=2807</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic12')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get My Settings</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic13"  >http://it.igcoco.com/api/get-my-settings?user_id=800000990001</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic13"  >http://it.igcoco.com/api/get-my-settings?user_id=800000990001</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic13')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update My Settings</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic14"  >http://it.igcoco.com/api/update-my-settings?user_id=800000990001&pref_name=manual_notifications&pref_val=1</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic14"  >http://it.igcoco.com/api/update-my-settings?user_id=800000990001&pref_name=manual_notifications&pref_val=1</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic14')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get Sessions(slot)</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic15"  >http://it.igcoco.com/api/get-sessions-by-slot?slot_id=2807</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic15"  >http://it.igcoco.com/api/get-sessions-by-slot?slot_id=2807</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic15')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >reschedule slot</span>
+        <span class="input-group-text" id="basic-addon3" >Slot Reschedule</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic16"  >http://it.igcoco.com/api/reschedule-slot?prev_slot_id=2807&remarks=&rescheduledflag=0&new_slot_id=2801</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic16"  >http://it.igcoco.com/api/reschedule-slot?prev_slot_id=7229&new_slot_id=7247&remarks=&rescheduledflag=0</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic16')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-       <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >reschedule session</span>
+        <span class="input-group-text" id="basic-addon3" >Slot Reschedule (Adhoc)</span>
       </div>
-        <textarea   type="text" class="form-control" id="basic17"  >http://it.igcoco.com/api/reschedule-session?prev_session_id=2766&rescheduledflag=0&next_session_id=2999&student_id=900000990001</textarea>
+        <textarea  type="text" class="form-control" id="basic33"  >
+http://it.igcoco.com/api/reschedule-slot?prev_slot_id=7229&remarks=&rescheduledflag=1&emp_timetable_id=101&ssd_id=103045&emp_id=800001180001&ig_date=2020-04-17&start_time=18%3A00%3A00&duration=60
+</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic33')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+
+       <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Reschedule Session</span>
+      </div>
+        <textarea   type="text" class="form-control" id="basic17"  >http://it.igcoco.com/api/reschedule-session?prev_session_id=2114&rescheduledflag=0&next_session_id=2158&student_id=900001180003</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic17')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >Mark Attendance</span>
+        <span class="input-group-text" id="basic-addon3" >Reschedule Session (Adhoc)</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic18"  >http://it.igcoco.com/api/mark-attendance?session_id=14228&event_id=3</textarea>
+        <textarea  type="text" class="form-control" id="basic34"  >
+http://it.igcoco.com/api/reschedule-session?prev_session_id=2107&rescheduledflag=1&emp_timetable_id=95&student_id=900001180003&ssd_id=103045&emp_id=800001180001&ig_date=2020-04-17&start_time=15%3A30%3A00&duration=60
+
+</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic34')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Mark Attendance Check in</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic18"  >http://it.igcoco.com/api/mark-attendance?session_id=14228&event_id=3</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic18')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Mark Attendance Check Out</span>
+      </div>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic36"  >http://it.igcoco.com/api/mark-attendance?session_id=14228&event_id=4</textarea>
+        <button class="btn btn-primary" onclick="copyToClipboard('#basic36')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Create Session Reminder</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic19"  >http://it.igcoco.com/api/create-session-reminder
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic19"  >http://it.igcoco.com/api/create-session-reminder
         </textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic19')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Student Payment Reminder</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic20"  >http://it.igcoco.com/api/student-payment-reminder</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic20"  >http://it.igcoco.com/api/student-payment-reminder</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic20')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Student Payment Calculation</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic21"  >http://it.igcoco.com/api/student-payment-calculation</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic21"  >http://it.igcoco.com/api/student-payment-calculation</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic21')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update Student Timetable Item</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic22"  >http://it.igcoco.com/api/update-student-schedule-item?studenttimetableid=56&status=4</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic22"  >http://it.igcoco.com/api/update-student-schedule-item?studenttimetableid=56&status=4</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic22')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update Preferences for Student</span>
       </div>
-        <textarea  style="height: 40px;" type="text" class="form-control" id="basic23"  >http://it.igcoco.com/api/update-preferences-for-student?student_id=900000990001&relationship_code=100</textarea>
+        <textarea  style="height: 40px;" type="text" class="form-control " id="basic23"  >http://it.igcoco.com/api/update-preferences-for-student?student_id=900000990001&relationship_code=100</textarea>
         <button class="btn btn-primary" onclick="copyToClipboard('#basic23')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get Fee Details for Student</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic24"  >http://it.igcoco.com/api/get-fee-details-for-student?student_id=900000310006 </textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic24"  >http://it.igcoco.com/api/get-fee-details-for-student?student_id=900000310006 </textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic24')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Get Subject Details for Student</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic25"  >http://it.igcoco.com/api/get-subject-details-for-student?student_id=900000990017</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic25"  >http://it.igcoco.com/api/get-subject-details-for-student?student_id=900000990017</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic25')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-      <div class="input-group mb-5" style="padding: 0px 60px;">
+      <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update Subject Details for Student</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic26"  >http://it.igcoco.com/api/update-subject-details-for-student?subject_code=4140&subject_level=3&id=1</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic26"  >http://it.igcoco.com/api/update-subject-details-for-student?subject_code=4140&subject_level=3&id=1</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic26')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-       <div class="input-group mb-5" style="padding: 0px 60px;">
+       <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update Guardian</span>
       </div>
@@ -308,55 +447,173 @@
     </div>
 
 
-       <div class="input-group mb-5" style="padding: 0px 60px;">
+       <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >>Get Guardian</span>
+        <span class="input-group-text" id="basic-addon3" >Get Guardian</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic28"  >it.igcoco.com/api/get-guardian?student_id=900000990001&parent_role=1</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic28"  >it.igcoco.com/api/get-guardian?student_id=900000990001&parent_role=1</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic28')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-       <div class="input-group mb-5" style="padding: 0px 60px;">
+       <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >>Get Student</span>
+        <span class="input-group-text" id="basic-addon3" >Get Student</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic29"  >http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic29"  >http://it.igcoco.com/api/get-student?student_id=900000990026</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic29')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
-     <div class="input-group mb-5" style="padding: 0px 60px;">
+     <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3" >>Get Schedule for Student</span>
+        <span class="input-group-text" id="basic-addon3" >Get Schedule for Student</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic30"  >http://it.igcoco.com/api/get-schedule-for-students?student_id=900000310006</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic30"  >http://it.igcoco.com/api/get-schedule-for-students?student_id=900000310006</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic30')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
 
 
-    <div class="input-group mb-5" style="padding: 0px 60px;">
+    <div class="input-group mb-5 rowsCustom">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon3" >Update Student Timetable Item</span>
       </div>
-      <textarea  style="height: 40px;" type="text" class="form-control" id="basic31"  >http://it.igcoco.com/api/update-student-schedule-item?studenttimetableid=56&status=4</textarea>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic31"  >http://it.igcoco.com/api/update-student-schedule-item?studenttimetableid=56&status=4</textarea>
       <button class="btn btn-primary" onclick="copyToClipboard('#basic31')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Student List</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="stud1"  >http://it.igcoco.com/api/get-student-session-by-entity?entity_id=118</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#stud1')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Classes List</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="stud2"  >http://it.igcoco.com/api/get-classes</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#stud2')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+       <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Cities List</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="stud3"  >http://it.igcoco.com/api/get-cities-list</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#stud3')" style="margin-left: 10px;">Copy URL</button><br/>
 
     </div>
 
 
 
 
+       <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Create Student</span>
+      </div>
+      <textarea  type="text" class="form-control" id="stud4"  >
+http://it.igcoco.com/api/create-student?entity_id=118&address=&city=Gurugram&pincode=&student_first_name=Student110&student_last_name=Test&dob=13-Nov-2010&class=8&school_name=&st_reg_mobile_num=&st_alt_mobile_num=&st_email=&user_id=800001180001
+</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#stud4')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+      <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Create Guardian</span>
+      </div>
+      <textarea  type="text" class="form-control" id="stud5"  >
+it.igcoco.com/api/create-guardian?first_name=Pritish&last_name=Ghosh&dob=1970-04-11&reg_mobile_num=9717907257&alt_mobile_num=&email=&profession_id=1&org_name=&parent_role=1&user_id=900000990001&entity_id=99&student_user_id=900000990023&relationship_code=100
+</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#stud5')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
 
 
 
+       
+
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Home Page Statistics</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic35">http://it.igcoco.com/api/get-home-page-statistics?entity_id=99&emp_id=800000990001</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic35')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     
+
+      <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >
+Get employee slots of the particular day(Class)</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic38" >http://it.igcoco.com/api/get-employee-slots?emp_id=800001180001&requested_date=2020-04-17</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic38')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
 
 
 
+      <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >SMS OTP Login</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic37">it.igcoco.com/api/sms-otp-login?mobile=9717907257&engagement_id=8&otp=508169</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic37')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Generate OTP</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic39">http://it.igcoco.com/api/generate-otp-tm?mobile=9717907257&engagement_id=8&ig_date=2020-05-05&ig_time=15:48 </textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic39')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+    <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Resend OTP</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic40">http://it.igcoco.com/api/resend-otp?mobile=7906579563</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic40')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
 
 
+     <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Get Slots for Reschedule</span>
+      </div>
+      <textarea  style="height: 40px;" type="text" class="form-control " id="basic41">it.igcoco.com/api/get-slots-for-reschedule?emp_id=800001190001&requested_date=2020-05-22&prev_slot_id=16984</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic41')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
+
+  
+
+        <div class="input-group mb-5 rowsCustom">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3" >Get Sessions for Reschedule</span>
+      </div>
+   
+
+      <textarea  type="text" class="form-control " id="basic42"> it.igcoco.com/api/get-slots-for-session-reschedule?emp_id=800001190001&requested_date=2020-05-21&prev_session_id=56316
+</textarea>
+      <button class="btn btn-primary" onclick="copyToClipboard('#basic42')" style="margin-left: 10px;">Copy URL</button><br/>
+
+    </div>
 
 
 
